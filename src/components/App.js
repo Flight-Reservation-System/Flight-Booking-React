@@ -1,4 +1,4 @@
-
+import "./Registration.js";
 
 function App() {
   return (
