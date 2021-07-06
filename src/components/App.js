@@ -3,7 +3,7 @@ import "./Registration.js";
 function App() {
   return (
     <div>
-      Hello
+      
     </div>
   );
 }
