@@ -2,20 +2,22 @@ import React from 'react'
 import LoginService from '../services/LoginService'
 import '../styles/loginstyle.css'
 
-function Login() {
+
+function Login(props) {
   
     const handleLogin=(e)=>{
         e.preventDefault()
         const username=document.loginform.username.value;
         const password=document.loginform.password.value;
-        LoginService(username,password)
+        let checkStatus=LoginService(username,password)
+        props.setStatus(checkStatus)
          
         
     }
 
     return (
         <div  className="body">
-            <h1>Login</h1>
+            <h1 className="header">Login</h1>
             <form name="loginform">
                 <label>Username:</label>
                 <input type="text" name="username"/><br/><br/>
